@@ -112,7 +112,7 @@
   {
     var map = this._map;
 
-    if (value && Blob.prototype.isPrototypeOf(value))
+    if (value && !value.name && Blob.prototype.isPrototypeOf(value))
     {
       if (!filename)
         filename = "Blob";
